@@ -1,4 +1,5 @@
 package Application::Pipeline::Services::DBI;
+$VERSION = '0.1.1';
 
 #-- pragmas ---------------------------- 
  use strict;
@@ -23,7 +24,7 @@ $dbh = $pipeline->dbh;
 our $dbh = undef;
 
 sub load {
-    my( $class, $pipeline @args ) = @_;
+    my( $class, $pipeline, @args ) = @_;
     $dbh ||= DBI->connect( @args );
 
     $pipeline->addServices( dbh => $dbh );

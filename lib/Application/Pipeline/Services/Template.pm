@@ -1,4 +1,5 @@
 package Application::Pipeline::Services::Template;
+$VERSION = '0.1';
 
 #-- pragmas ---------------------------- 
  use strict;
